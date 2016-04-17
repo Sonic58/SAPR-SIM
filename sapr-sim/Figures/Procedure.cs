@@ -29,6 +29,11 @@ namespace sapr_sim.Figures
             "Временная продолжительность процедуры. Может принимать положительное целочисленное значение");
         private UIParam<TimeMeasure> timeMeasure = new UIParam<TimeMeasure>(TimeMeasure.SECOND, new DefaultParamValidator(), "Единицы измерения",
             "Единица измерения времени", new ParameterComboBox(TimeMeasure.list()));
+
+
+       // private UIParam<List<string>> property = new UIParam<List<string>>(2,new DefaultParamValidator(),"Набор свойств зависимостей","Тест");
+
+
         private UIParam<Int32> scatter = new UIParam<Int32>(0, new BetweenIntegerParamValidator(0, 100), "Разброс (%)",
             "Вводит стохастичность в процедуры. Продолжительность процедуры начинает измеряться по формуле: \"Продолжительность\" ± \"Разброс\". " + 
             "Может принимать целочисленное значение на отрезке [0; 100]");
@@ -98,6 +103,7 @@ namespace sapr_sim.Figures
             List<UIParam> param = base.getParams();
             param.Add(time);
             param.Add(timeMeasure);
+           // param.Add(property);
             param.Add(scatter);
             return param;
         }

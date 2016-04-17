@@ -7,6 +7,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -16,6 +17,8 @@
                 <TextBlock Name="description" MinWidth="500" MaxWidth="530" Margin="0, 0, 0, 2" TextWrapping="WrapWithOverflow"/>
             </StackPanel>
         </Border>
+
+        
         <StackPanel Grid.Row="1" Name="sp"/>
         <WrapPanel Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Right"  Margin="0,15,0,0">
             <Button IsDefault="True" x:Name="btnDialogOk" Click="btnDialogOk_Click" MinWidth="60" MinHeight="20" Margin="0,0,10,0" Content="Применить"/>
